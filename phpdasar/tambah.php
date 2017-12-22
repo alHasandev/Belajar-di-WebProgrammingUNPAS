@@ -33,7 +33,7 @@
 <body>
 	<h1>Tambah Data Mahasiswa</h1>
 
-	<form action="" method="POST">
+	<form action="" method="POST" enctype="multipart/form-data">
 		<ul>
 			<li>
 				<label for="npm">NPM : </label>
@@ -57,7 +57,7 @@
 
 			<li>
 				<label for="gambar">Gambar : </label>
-				<input type="text" name="gambar" id="gambar">
+				<input type="file" name="gambar" id="gambar">
 			</li>
 
 			<li>

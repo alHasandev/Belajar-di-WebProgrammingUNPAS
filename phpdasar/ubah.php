@@ -40,8 +40,9 @@
 <body>
 	<h1>Ubah Data Mahasiswa</h1>
 
-	<form action="" method="POST">
+	<form action="" method="POST" enctype="multipart/form-data">
 		<input type="hidden" name="id" value="<?= $mhs['id']; ?>">
+		<input type="hidden" name="gambarLama" value="<?= $mhs['gambar']; ?>">
 		<ul>
 			<li>
 				<label for="npm">NPM : </label>
@@ -64,8 +65,9 @@
 			</li>
 
 			<li>
-				<label for="gambar">Gambar : </label>
-				<input type="text" name="gambar" id="gambar" value="<?= $mhs["gambar"]; ?>">
+				<label for="gambar">Gambar : </label><br>
+				<img src="img/<?= $mhs['gambar']; ?>" alt="" width="40"><br>
+				<input type="file" name="gambar" id="gambar">
 			</li>
 
 			<li>

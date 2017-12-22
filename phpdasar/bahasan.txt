@@ -1,0 +1,15 @@
+Membahasa tentang Database & Mysql
+-Pengertian Data
+-Pengertian Database
+-Sejarah Singkat Mysql
+-Menginstall Packet Aplikasi Sever dan Mysql (Xampp, Wamp, Lamp, Mamp)
+-Menjalankan Mysql (root) dr Comand Prompt
+-Membuat Database
+-Membuat Table
+-Menampilkan database
+-Menampikan table
+-Memasukkan data ke table
+-Mengedit data dalam table
+-Menghapus data dalam table
+-Menghapus Table
+-Menghapus Database.

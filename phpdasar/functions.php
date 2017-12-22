@@ -3,7 +3,7 @@
 	// Koneksi ke database
 	$conn = mysqli_connect("localhost", "root", "", "db_phpdasar");
 
-
+	// fungsi untuk menampilkan data
 	function query($query) {
 		global $conn;
 		$result = mysqli_query($conn, $query);
@@ -15,6 +15,7 @@
 		return $rows;
 	}
 
+	// fungsi untuk tambah data
 	function tambah($data) {
 		global $conn;
 
@@ -32,6 +33,7 @@
 		return mysqli_affected_rows($conn);
 	}
 
+	// fungsi untuk hapus data
 	function hapus($id) {
 		global $conn;
 		mysqli_query($conn, "DELETE FROM mahasiswa WHERE id = $id");
@@ -39,6 +41,7 @@
 		return mysqli_affected_rows($conn);
 	}
 
+	// fungsi untuk ubah data
 	function ubah($data) {
 		global $conn;
 
@@ -64,6 +67,18 @@
 
 		return mysqli_affected_rows($conn);
 
+	}
+
+	// fungsi untuk mencari data sesuai keyword
+	function cari($keyword) {
+		$query = "SELECT * FROM mahasiswa 
+				   WHERE 
+					nama LIKE '%$keyword%' OR
+					npm LIKE '%$keyword%' OR
+					email LIKE '%$keyword%' OR
+					jurusan LIKE '%$keyword%'
+				";
+		return query($query);
 	}
 
  ?>

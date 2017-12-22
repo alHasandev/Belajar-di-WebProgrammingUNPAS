@@ -35,7 +35,7 @@
 			<tr>
 				<td><?= $i; ?></td>
 				<td>
-					<a href="">Ubah</a> | <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Hapus Data ini ?');">Hapus</a>
+					<a href="ubah.php?id=<?= $row["id"]; ?>">Ubah</a> | <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Hapus Data ini ?');">Hapus</a>
 				</td>
 				<td><img src="img/<?= $row["gambar"]; ?>" width="50" alt=""></td>
 				<td><?= $row['npm']; ?></td>

@@ -39,4 +39,31 @@
 		return mysqli_affected_rows($conn);
 	}
 
+	function ubah($data) {
+		global $conn;
+
+		// ambil data dari tiap elemen dalam form
+		// $id = $_GET["id"];
+		$id = $data['id'];
+		$nama = htmlspecialchars($data["nama"]);
+		$npm = htmlspecialchars($data["npm"]);
+		$email = htmlspecialchars($data["email"]);
+		$jurusan = htmlspecialchars($data["jurusan"]);
+		$gambar = htmlspecialchars($data["gambar"]);
+
+		// query insert data
+		$query = "UPDATE mahasiswa SET
+					npm = '$npm', 
+					nama = '$nama', 
+					email = '$email', 
+					jurusan = '$jurusan',
+					gambar = '$gambar'
+				  WHERE id = '$id'
+				";
+		mysqli_query($conn, $query);
+
+		return mysqli_affected_rows($conn);
+
+	}
+
  ?>

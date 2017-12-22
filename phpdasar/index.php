@@ -1,6 +1,7 @@
 <?php 
-require 'functions.php';
-$mahasiswa = query("SELECT * FROM mahasiswa");
+	// memanggil file function.php / require / include
+	require 'functions.php';
+	$mahasiswa = query("SELECT * FROM mahasiswa");
 
 ?>
 
@@ -13,6 +14,9 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 <body>
 	
 	<h1>Daftar Mahasiswa</h1>
+
+	<a href="tambah.php">Tambah data mahasiswa</a>
+	<br><br>
 
 	<table border="1" cellpadding="10" cellspacing="0">
 		<tr>
@@ -31,7 +35,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 			<tr>
 				<td><?= $i; ?></td>
 				<td>
-					<a href="">Ubah</a> | <a href="">Hapus</a>
+					<a href="">Ubah</a> | <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Hapus Data ini ?');">Hapus</a>
 				</td>
 				<td><img src="img/<?= $row["gambar"]; ?>" width="50" alt=""></td>
 				<td><?= $row['npm']; ?></td>

@@ -16,6 +16,7 @@
 	<meta charset="UTF-8">
 	<title>Halaman Admin</title>
 </head>
+
 <body>
 	
 	<h1>Daftar Mahasiswa</h1>
@@ -24,7 +25,7 @@
 	<br><br>
 
 	<form action="" method="POST">
-		<input type="text" name="keyword" size="50" placeholder="Masukkan keyword pencarian..." autofocus="" autocomplete="off">
+		<input type="text" name="keyword" size="50" placeholder="Cari disini.." autofocus="" autocomplete="off">
 		<button type="submit" name="cari">Cari!</button>
 	</form>
 	<br>

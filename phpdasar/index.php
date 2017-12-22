@@ -1,83 +1,85 @@
-<?php
-// Lokasi : http://localhost/Web%20Programming%20Unpas/phpdasar/pertemuan2/
-// Pertemuan 2 - PHP Dasar
-// Mengenai Sintaks PHP
+<?php 
+// Pertemuan 3 -- PHP Dasar
+// Control Flow
+// Perulangan
+	// for
+	// for ( $i = 0; $i < 5; $i++ ) {
+	// 	echo "Hello World! <br>";
+	// }
 
-// Standar Output
-	// echo, print
-	// print_r
-	// var_dump
+	// while
+	// $i = 0;
+	// while( $i < 5 ) {
+	// 	echo "Hello World! <br>";
+	// 	$i++;
+	// }
 
-	// echo 'Mohamad Albie <br>';
-	// echo 123;
-	// echo '<br>';
-	// echo "jum'at <br>";
-	// echo 'true <br>';
-	// print "Mohamad Albie <br>";
-	// print_r('Mohamad Albie <br>');
-	// var_dump('Mohamad Albie');
-	// echo "<br>";
+	// do.. while
+	// $i = 5;
+	// do {
+	// 	echo "Hello World! <br>";
+	// 	$i++;
 
-	// // Penulisan Sintaks PHP
-	// // 1. PHP di dalam HTML --Recomended
-	// // 2. HTML di dalam PHP
+	// } while( $i < 5 );
 
-	// // Variabel dan Tipe Data
-	// // variabel
-	// 	// tidak boleh diawali oleh angka, tapi boleh mengandung angka
-	// 	// tanda kutif dua lebih powerfull daripada tanda kutif satu.
-	$nama = "Mohamad Albie";
+	// foreach : perulangan khusus array;
 
-	echo "Halo, nama saya $nama";
-	echo "<br>";
 
-	// Operator
-	// Aritmatika
-	// + - * / %
-	// $x = 10;
-	// $y = 20;
-	// echo "Hasil dari 10 X 20 adalah ".$x * $y;
-	// echo "<br>";
+// Pengkondisian
+	// If else
+	// If.. else if.. else
+	// ternary
+	// switch
 
-	// // Penggabung String / concatenation / concat / .
-	// $nama_depan = "Mohamad";
-	// $nama_belakang = "Albie";
-	// echo $nama_depan ." ". $nama_belakang;
+// $x = 20;
+// if( $x < 20 ) {
+// 	echo "Benar";
+// } else if( $x == 20 ) {
+// 	echo "Binggo";
+// } else {
+// 	echo "Salah";
+// }
 
-	// Assignment
-	// // =, +=, -=, *=, /=, %=, .=
-	// $x = 1;
-	// $x += 5;
-	// echo $x;
 
-	// $nama = "Mohamad";
-	// $nama .= " ";
-	// $nama .= "Albie";
-	// echo $nama;
+ ?>
 
-	// // Perbandingan
-	// // < | > | <= | >= | == | !=
-	// var_dump(1 == '1');
-	// var_dump(1 === '1');
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Latihan 1</title>
+ 	<style>
+ 		.warna-baris {
+ 			background-color: silver;
+ 		}
+ 	</style>
+ </head>
+ <body>
 
-	// // Logika
-	// // &&, ||, !
-	// $x = 10;
-	// var_dump($x < 20 && $x % 2 == 0);
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Belajar PHP</title>
-</head>
-<body>
-	<h1>Halo, Selamat Datang <?php echo $nama ?></h1>
-	<p><?php echo "ini adalah paragraf" ?></p>
+ 	<table border="1" cellpadding="10" cellspacing="0">
+	 	<!-- <?php 
+	 		// for( $i = 1; $i <= 3; $i++ ) {
+	 		// 	echo "<tr>";
+	 		// 	for( $j = 1; $j <= 5; $j++ ) {
+	 		// 		echo "<td>$i,$j</td>";
+	 		// 	}
+	 		// 	echo "</tr>";
+	 		// }
+	 	 ?> -->
 
-	<?php 
-		echo "<h1>Halo, Selamat Datang Albie</h1>"
-	 ?>
-	
-</body>
-</html>
+	 	 <?php for( $i = 1; $i <= 5; $i++ ) : ?>
+	 	 	<?php if( $i % 2 == 1 ) : ?>
+				<tr class="warna-baris">
+			<?php else : ?>
+				<tr>
+			<?php endif; ?>
+				<?php for( $j = 1; $j <=5; $j++ ) : ?>
+					<td><?= "$i,$j"; ?></td>
+				<?php endfor; ?>
+				</tr>
+	 	 <?php endfor; ?>
+
+ 	</table>
+ 	
+ </body>
+ </html>
